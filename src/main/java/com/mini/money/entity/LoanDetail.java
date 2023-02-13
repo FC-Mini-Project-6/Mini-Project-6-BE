@@ -5,26 +5,20 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "mortgage_detail_loan")
+@Table(name = "loan_option")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Getter
 @ToString
-public class MortgageLoanDetail {
+public class LoanDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fin_prdt_cd")
-    private MortgageLoan mortgageLoan;
-
-    @Column(name = "mrtg_type")
-    private String mrtgType;
-
-    @Column(name = "mrtg_type_nm")
-    private String mrtgTypeNm;
+    private Loan loan;
 
     @Column(name = "rpay_type")
     private String rpayType;
@@ -47,13 +41,18 @@ public class MortgageLoanDetail {
     @Column(name = "lend_rate_avg")
     private String lendRateAvg;
 
-//    public MortgageLoanDetail(String finPrdtCd, String mrtgType, String mrtgTypeNm,
-//                              String rpayType, String rpayTypeNm, String lendRateType,
-//                              String lendRateTypeNm, String lendRateMin, String lendRateMax, String lendRateAvg) {
+    @Column(name = "mrtg_type")
+    private String mrtgType;
+
+    @Column(name = "mrtg_type_nm")
+    private String mrtgTypeNm;
+
+//    public LoanDetail(String finPrdtCd,
+//                    String rpayType, String rpayTypeNm, String lendRateType,
+//                    String lendRateTypeNm, String lendRateMin, String lendRateMax,
+//                    String lendRateAvg) {
 //
 //        this.finPrdtCd = finPrdtCd;
-//        this.mrtgType = mrtgType;
-//        this.mrtgTypeNm = mrtgTypeNm;
 //        this.rpayType = rpayType;
 //        this.rpayTypeNm = rpayTypeNm;
 //        this.lendRateType = lendRateType;

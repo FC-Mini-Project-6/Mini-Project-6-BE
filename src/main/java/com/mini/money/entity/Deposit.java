@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "deposit_baseinfo")
+@Table(name = "deposit")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

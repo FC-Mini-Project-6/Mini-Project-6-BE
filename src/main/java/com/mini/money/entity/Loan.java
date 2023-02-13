@@ -5,13 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "saving_baseinfo")
+@Table(name = "loan")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Getter
 @ToString
-public class Saving {
+public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,20 +28,17 @@ public class Saving {
     @Column(name = "join_way")
     private String joinWay;
 
-    @Column(name = "mtrt_int")
-    private String mtrtInt;
+    @Column(name = "loan_inci_expn")
+    private String loanInciExpn;
 
-    @Column(name = "spcl_cnd")
-    private String spclCnd;
+    @Column(name = "erly_rpay_fee")
+    private String erlyRpayFee;
 
-    @Column(name = "join_member")
-    private String joinMember;
+    @Column(name = "dly_rate")
+    private String dlyRate;
 
-    @Column(name = "etc_note")
-    private String etcNote;
-
-    @Column(name = "max_limit")
-    private String maxLimit;
+    @Column(name = "loan_lmt")
+    private String loanLmt;
 
     @Column(name = "dcls_strt_day")
     private String dclsStrtDay;
@@ -49,18 +46,20 @@ public class Saving {
     @Column(name = "dcls_end_day")
     private String dclsEndDay;
 
-//    public Saving(String finPrdtCd, String korCoNm, String finPrdtNm, String joinWay, String mtrtInt, String spclCnd,
-//                  String joinMember, String etcNote, String maxLimit, String dclsStrtDay, String dclsEndDay) {
+
+//    public Loan(String finPrdtCd, String korCoNm,
+//                                 String finPrdtNm, String joinWay, String loanInciExpn,
+//                                 String erlyRpayFee, String dlyRate, String loanLmt,
+//                                 String dclsStrtDay, String dclsEndDay) {
 //
-//        this.finPrdtCd = finPrdtCd;
 //        this.korCoNm = korCoNm;
+//        this.finPrdtCd = finPrdtCd;
 //        this.finPrdtNm = finPrdtNm;
 //        this.joinWay = joinWay;
-//        this.mtrtInt = mtrtInt;
-//        this.spclCnd = spclCnd;
-//        this.joinMember = joinMember;
-//        this.etcNote = etcNote;
-//        this.maxLimit = maxLimit;
+//        this.loanInciExpn = loanInciExpn;
+//        this.erlyRpayFee = erlyRpayFee;
+//        this.dlyRate = dlyRate;
+//        this.loanLmt = loanLmt;
 //        this.dclsStrtDay = dclsStrtDay;
 //        this.dclsEndDay = dclsEndDay;
 //

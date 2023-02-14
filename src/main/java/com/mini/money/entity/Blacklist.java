@@ -26,7 +26,4 @@ public class Blacklist {
     @Column(name = "input_date")
     private String inputDate;
 
-
-
-
 }

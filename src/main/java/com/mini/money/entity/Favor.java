@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Favor {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "favor_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -16,12 +16,8 @@ public class Favor {
     private Customer customer;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fin_prdt_cd_loan")
+    @JoinColumn(name = "loan_id")
     private Loan loan;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fin_prdt_cd_deposit")
-    private Deposit deposit;
 
 
 

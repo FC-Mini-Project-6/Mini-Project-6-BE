@@ -37,7 +37,7 @@ public class CustomerDetail {
     private String bank;
 
     @Column(name="crdt_grade")
-    private Double crdt_grade;
+    private Double crdtGrade;
 
     @Column(name="income")
     private int income;
